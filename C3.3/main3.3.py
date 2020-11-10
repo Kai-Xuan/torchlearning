@@ -41,6 +41,31 @@ nn.init.constant_(net.linear.bias, val=0)
 #   (linear): Linear(in_features=2, out_features=1, bias=True)
 # )
 
+
+
+# # 写法一
+# net = nn.Sequential(
+#     nn.Linear(num_inputs, 1)
+#     # 此处还可以传入其他层
+#     )
+#
+# # 写法二
+# net = nn.Sequential()
+# net.add_module('linear', nn.Linear(num_inputs, 1))
+# # net.add_module ......
+#
+# # 写法三
+# from collections import OrderedDict
+# net = nn.Sequential(OrderedDict([
+#           ('linear', nn.Linear(num_inputs, 1))
+#           # ......
+#         ]))
+#
+# print(net)
+# print(net[0])
+
+
+
 # print(net.linear.weight)
 # >>
 # Parameter containing:
