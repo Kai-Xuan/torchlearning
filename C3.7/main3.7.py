@@ -72,7 +72,7 @@ optimizer = torch.optim.SGD(net.parameters(),lr=0.1)
 # for param in net.parameters():
 #     print(param)
 
-num_epochs = 5
+num_epochs = 20
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, batch_size, None, None, optimizer)
 
 
